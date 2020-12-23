@@ -1,5 +1,7 @@
 class Triangle
 
+  attr_accessor :a, :b, :c
+
   def initialize(x, y, z)
     @x = x
     @y = y
