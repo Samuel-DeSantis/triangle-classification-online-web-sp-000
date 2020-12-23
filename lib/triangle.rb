@@ -1,17 +1,17 @@
 class Triangle
 
-  attr_accessor :x, :y, :z
+  attr_accessor :a, :b, :c
 
-  def initialize(x, y, z)
-    @x = x
-    @y = y
-    @z = z
+  def initialize(a, b, c)
+    @a = a
+    @b = b
+    @c = c
   end
 
   def kind
-    if @x == @y && @y == @z
+    if @a == @b && @b == @c
       :equilateral
-    elsif @x == @y || @y == @z || @x == @z
+    elsif @a == @b || @b == @c || @a == @c
       :isosceles
     else
       :scalene
@@ -19,8 +19,8 @@ class Triangle
   end
 
   def validate_triangle
-    real_triangle = [(x + y > z), (x + z > y), (y + z > x)]
-    [x, y, z].each do |side|
+    real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
+    [a, b, c].each do |side|
       real_triangle << false if side <= 0
       raise TriangleError if real_triangle.include?(false)
     end
