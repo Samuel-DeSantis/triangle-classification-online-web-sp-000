@@ -11,8 +11,8 @@ class Triangle
       raise TriangleError
     elsif @x < 0 || @y < 0 || @z < 0
       raise TriangleError
-    elsif tri_inequality?(@x, @y, @z)
-      raise TriangleError
+#    elsif tri_inequality?(@x, @y, @z)
+#      raise TriangleError
     elsif @x == @y && @y == @z
       :equilateral
     elsif @x == @y || @y == @z || @x == @z
