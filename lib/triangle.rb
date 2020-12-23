@@ -24,11 +24,11 @@ class Triangle
 
   def tri_inequality?(a, b, c)
     if a + b > c
-      next
+      true
     elsif a + c > b
-      next
+      true
     elsif b + c > a
-      next
+      true
     else
       false
     end
